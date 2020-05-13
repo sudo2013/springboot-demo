@@ -21,7 +21,7 @@
 
 ``` lua
 |-- bin 可执行文件  
-	|-- application.yml -- springboot 配置文件
+    |-- application.yml -- springboot 配置文件
     |-- Bat4WindowsService.exe -- 注册到 windwos 服务所需的代理
     |-- Bat4WindowsService.exe.config -- 注册到 windwos 服务的配置
     |-- installService.bat -- 安装为系统服务，windows 系统
