@@ -1,4 +1,4 @@
-# springboot-install-to-service-demo
+# springboot 项目安装位系统服务，支持linux|windows
 
 # 配置项
 
