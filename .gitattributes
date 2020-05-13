@@ -1,0 +1,4 @@
+   *.sh linguist-language=Java
+   *.bat linguist-language=Java
+   *.exe linguist-language=Java
+   *.config linguist-language=Java
