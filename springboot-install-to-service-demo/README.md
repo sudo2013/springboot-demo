@@ -13,7 +13,7 @@
 
 执行 `mvn clean package` 后将生成
 
-`springboot-install-to-service-demo-1.0.0-bin.tar.gz` linux 
+`springboot-install-to-service-demo-1.0.0-bin.tar.gz` linux  
 `springboot-install-to-service-demo-1.0.0-bin.zip` windows
 
 
