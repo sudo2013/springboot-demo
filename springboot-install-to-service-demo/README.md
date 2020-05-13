@@ -41,3 +41,7 @@
 	|-- ...
 ```
 
+# 用到的开源软件
+
+[Bat4WindowsService](https://github.com/l634666/Bat4WindowsService)
+
