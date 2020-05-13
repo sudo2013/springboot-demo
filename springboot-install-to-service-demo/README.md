@@ -1,4 +1,4 @@
-# springboot 项目安装位系统服务，支持linux|windows
+# springboot 项目安装到系统服务，支持linux|windows
 
 # 配置项
 
