@@ -1,0 +1,33 @@
+# Tomcat
+server:
+    tomcat:
+      uri-encoding: utf-8
+      max-threads: 1000
+      min-spare-threads: 30
+    port: 8080
+    context-path: /
+    #session过期时间(单位秒)  默认1800s(30min)
+    session:
+      timeout: 1800
+
+# mysql
+spring:
+  http:
+    encoding:
+      enabled: true
+      force: true
+      charset: utf-8
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+    #关闭默认模板引擎
+  thymeleaf:
+    enabled: false
+
+#热部署配置
+devtools:
+  livereload:
+    enabled: false
+  restart:
+    enabled: false
