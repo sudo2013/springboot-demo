@@ -4,7 +4,7 @@ server:
       uri-encoding: utf-8
       max-threads: 1000
       min-spare-threads: 30
-    port: 8080
+    port: ${SERVER_PORT:8080}
     context-path: /
     #session过期时间(单位秒)  默认1800s(30min)
     session:
@@ -24,6 +24,9 @@ spring:
     #关闭默认模板引擎
   thymeleaf:
     enabled: false
+
+logging:
+  config: classpath:logback.xml
 
 #热部署配置
 devtools:

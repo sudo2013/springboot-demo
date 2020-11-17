@@ -12,7 +12,7 @@
     <name>SpringBoot Install To Service Demo</name>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <description>http://www.taigula.com</description>
+    <description>https://www.plopco.com</description>
 
     <dependencies>
 
@@ -33,6 +33,13 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+
+        <!-- log start -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+        <!-- log end -->
 
         <!-- servlet 依赖 -->
         <dependency>

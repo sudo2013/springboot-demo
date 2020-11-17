@@ -27,6 +27,18 @@
             <outputDirectory>/bin</outputDirectory>
             <filtered>true</filtered>
             <fileMode>0755</fileMode>
+            <excludes>
+                <exclude>Bat4WindowsService.exe</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/src/main/bin</directory>
+            <outputDirectory>/bin</outputDirectory>
+            <includes>
+                <include>Bat4WindowsService.exe</include>
+            </includes>
+            <filtered>false</filtered>
+            <fileMode>0755</fileMode>
         </fileSet>
 
         <!-- 依赖的jar -->
