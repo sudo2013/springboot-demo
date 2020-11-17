@@ -1,15 +1,21 @@
-#!/bin/sh
+#!/bin/sh -l
 
 # -----------------------------------
 # @author: liusx
-# @email: liusx@intmes.com
+# @email: liusx@plopco.com
 # @description: 安装 linux 服务
 # @create: 2020-05-13
-# @repository: https://github.com/l634666/Bat4WindowsService
 # -----------------------------------
 
 ## 引入运行环境
-source ./setenv.sh
+BASE_PATH=$1
+BIN_PATH=
+if [ -n "$BASE_PATH" ]; then
+BIN_PATH=$BASE_PATH/bin
+else
+BIN_PATH=./
+fi
+source $BIN_PATH/setenv.sh $BASE_PATH
 
 echo "Service installing..."
 

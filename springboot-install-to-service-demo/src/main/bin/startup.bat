@@ -1,11 +1,11 @@
+chcp 65001
 @echo off
 
 rem -----------------------------------
 rem @author: liusx
-rem @email: liusx@intmes.com
+rem @email: liusx@plopco.com
 rem @description: 启动
 rem @create: 2020-05-13
-rem @repository: https://github.com/l634666/Bat4WindowsService
 rem -----------------------------------
 
 rem 设置变量作用域为局部
@@ -25,7 +25,7 @@ for /f "usebackq tokens=1-2" %%a in (`jps -l ^| findstr %APP_NAME%`) do (
 if not defined pid (
     echo Service %APP_NAME% starting...
 
-	start %JRE_HOME%\bin\javaw %JAVA_OPTS% -jar %SPRING_PROFILES_ACTIVE% %APP_JAR_FILE% %APP_NAME% 2>&1
+	start "" "%JRE_HOME%/bin/javaw" %JAVA_OPTS% -jar %SPRING_PROFILES_ACTIVE% %APP_JAR_FILE% %APP_NAME% 2>&1
 )
 
 echo Service %APP_NAME% started

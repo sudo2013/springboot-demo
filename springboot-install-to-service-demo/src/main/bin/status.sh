@@ -3,8 +3,8 @@
 # -----------------------------------
 # @author: liusx
 # @email: liusx@plopco.com
-# @description: 重新启动
-# @create: 2020-05-13
+# @description: 状态查询
+# @create: 2020-06-22
 # -----------------------------------
 
 ## 引入运行环境
@@ -17,8 +17,10 @@ BIN_PATH=./
 fi
 source $BIN_PATH/setenv.sh $BASE_PATH
 
-# 停止
-$BIN_PATH/shutdown.sh $BIN_PATH
-sleep 2
-#启动
-$BIN_PATH/bin/startup.sh $BIN_PATH
+# check server
+PIDS=`ps --no-heading -C java -f --width 1000 | grep "$APP_NAME" | awk '{print $2}'`
+if [ -n "$PIDS" ]; then
+   echo "Service $APP_NAME Started"
+else
+  echo "Service $APP_NAME Stopped"
+fi

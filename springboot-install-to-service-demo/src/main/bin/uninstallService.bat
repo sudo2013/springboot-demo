@@ -1,11 +1,11 @@
+chcp 65001
 @echo off
 
 rem -----------------------------------
 rem @author: liusx
-rem @email: liusx@intmes.com
+rem @email: liusx@plopco.com
 rem @description: 卸载 windows 服务
 rem @create: 2020-05-13
-rem @repository: https://github.com/l634666/Bat4WindowsService
 rem -----------------------------------
 
 rem 设置变量作用域为局部

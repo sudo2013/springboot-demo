@@ -4,8 +4,8 @@ chcp 65001
 rem -----------------------------------
 rem @author: liusx
 rem @email: liusx@plopco.com
-rem @description: 重新启动
-rem @create: 2020-05-13
+rem @description: 状态查询
+rem @create: 2020-06-22
 rem -----------------------------------
 
 rem 设置变量作用域为局部
@@ -17,9 +17,17 @@ cd /d %~dp0
 :: 引入运行环境
 call ./setenv.bat
 
-rem 停止，传入"0"代表取消自动退出，此处必须传入小于"1"的
-rem 数字，否则"./startup.bat"脚本则会被终止执行
-call ./shutdown.bat 0
+:: 查找服务进程
+for /f "usebackq tokens=1-2" %%a in (`jps -l ^| findstr %APP_NAME%`) do (
+    set pid=%%a
+)
 
-rem 启动
-call ./startup.bat
+if defined pid (
+    echo Service %APP_NAME% Started
+) else (
+    echo Service %APP_NAME% Stopped
+)
+
+TIMEOUT /T 5 /NOBREAK
+
+exit
